@@ -1,0 +1,15 @@
+{
+  "name": "desafio-2-codigo",
+  "version": "1.0.0",
+  "description": "Desafio 2 - Implementação de Blog Paws n' Play",
+  "scripts": {
+    "build": "tsc",
+    "watch": "tsc --watch" 
+  },
+  "keywords": ["blog", "typescript","html", "css"],
+  "author": "Larissa Fernandes",
+  "license": "ISC",
+  "devDependencies": {
+    "typescript": "^5.8.3"
+  }
+}
