@@ -1,0 +1,275 @@
+* {
+  box-sizing: border-box;
+}
+
+.mobile-menu {
+    display: none;
+    background: linear-gradient(135deg, rgba(0, 31, 63, 0.9) 0%, rgba(0, 0, 0, 0.8) 100%); 
+    color: white;
+    position: absolute;
+    top: 80px;
+    width: 100%;
+    z-index: 999;
+    border-radius: 8px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    padding: 20px 0;
+}
+
+.mobile-menu-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+}
+
+.mobile-menu-links li {
+    padding: 15px 20px;
+}
+
+.mobile-menu-links li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    transition: color 0.3s;
+    display: block;
+}
+
+.mobile-menu-links li a:hover {
+    color: #ffa500;
+}
+
+.mobile-menu-links li a.active {
+    font-weight: bold;
+    color: #ffa500;
+}
+
+body {
+  margin: 0;
+  line-height: normal;
+}
+
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 80px;
+  background: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 16px;
+  z-index: 1000;
+}
+
+.logo-link {
+    text-decoration: none;
+}
+
+.nav-menu-links {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+ul li p {
+  padding: 10px 10px;
+}
+
+ul li a {
+  color: rgba(255, 255, 255, 0.8);
+  text-decoration: none;
+  transition: color 0.3s, text-shadow 0.3s;
+  padding: 10px 10px;
+}
+
+.hero {
+  min-height: 100vh;
+  background: radial-gradient(
+      34.36% 56.53% at 69.14% 32.92%,
+      rgba(0, 0, 0, 0) 0%,
+      rgba(0, 0, 0, 0.5) 71.57%
+    ),
+    url("/src/assets/imagens/cover/golden-retriever.png") lightgray -169.202px -1.136px /
+      278.663% 100% no-repeat;
+  display: flex;
+  align-items: center;
+  padding: 0 16px;
+  padding-top: 60px;
+  color: white;
+}
+
+.button-shop-now {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: transparent;
+    border: 2px solid #fff;
+    padding: 10px 20px;
+    font-size: 16px;
+    color: #fff;
+    font-weight: 600;
+    border-radius: 42px;
+  }
+
+.hero h1 {
+  color: #fff;
+  font-family: "Formative Trial";
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 130%;
+  letter-spacing: 0.6px;
+}
+
+.hero p {
+  font-size: 18px;
+  line-height: 1.5;
+  margin: 20px 0;
+}
+.logo-paws-title {
+  position: relative;
+  font-size: 20px;
+  line-height: 24px;
+  font-family: "Formative Trial";
+  color: #fff;
+  text-align: left;
+}
+
+#button-get-started {
+  width: 150px;
+  background-color: #fff;
+  color: #101828;
+  border: none;
+  text-align: left;
+  border-radius: 50px;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+#button-get-started:hover {
+  background-color: #e0e0e0;
+  color: #101828;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .logo-icon-paws {
+    width: 100%;
+    position: relative;
+    height: 32px;
+    overflow: hidden;
+    flex-shrink: 0;
+  }
+
+  .logo-paws-title {
+    position: relative;
+    font-size: 20px;
+    line-height: 24px;
+    font-family: "Formative Trial";
+    color: #fff;
+    text-align: left;
+  }
+
+  .nav-menu-links {
+    display: none;
+  }
+
+  .button-shop-now {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: transparent;
+    border: 2px solid #fff;
+    padding: 10px 20px;
+    font-size: 16px;
+    color: #fff;
+    font-weight: 600;
+    border-radius: 42px;
+  }
+  #button-get-started {
+    display: none;
+  }
+
+.hero-content h1,
+.hero-content p {
+  width: 313px;
+}
+
+.hero-content p {
+  color: #fff;
+  font-family: "Formative Trial";
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 120%;
+}
+}
+
+/* Desktop */
+@media (min-width: 768px) {
+  .navbar {
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 100px;
+  }
+  .logo-container {
+    position: relative;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 50px;
+    text-align: left;
+    font-size: 20px;
+    color: #fff;
+    font-family: "Formative Trial";
+    padding-left: 40px;
+  }
+
+  .button-mobile {
+    display: none;
+  }
+
+  .hero {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 250px 150px;
+    background: radial-gradient(
+        110.76% 45.35% at 71.32% 43.04%,
+        rgba(0, 0, 0, 0) 0%,
+        rgba(0, 0, 0, 0.5) 68.31%
+      ),
+      url("/src/assets/imagens/cover/golden-retriever.png") lightgray -33.4px -86.393px /
+        144.207% 127.564% no-repeat;
+  }
+
+.hero-content h1,
+.hero-content p {
+  width: 600px;
+}
+
+.hero-content h1 {
+  width: 600px;
+  font-size: 60px;
+}
+
+.hero-content p {
+  color: #fff;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 100;
+}
+
+}
