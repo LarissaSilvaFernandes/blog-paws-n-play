@@ -1,7 +1,7 @@
 .shop {
   padding: 30px 80px 100px 80px;
   text-align: center;
-  background: hsl(0, 0%, 98%);
+  background: white;
 }
 
 .shop h2 {
@@ -54,7 +54,7 @@
 }
 
 .product {
-  background: #f9f9f9;
+  background: white;
   border-radius: 8px;
   padding: 10px;
   max-width: 500px;
