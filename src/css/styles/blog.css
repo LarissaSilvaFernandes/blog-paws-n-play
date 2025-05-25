@@ -1,0 +1,145 @@
+.blog {
+  padding: 30px 60px;
+  text-align: left;
+  background: white;
+}
+
+.blog-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.logo-icon-paws-black {
+  display: flex;
+  align-items: center;
+}
+
+.blog-title {
+  font-size: 35px;
+  margin-left: 10px;
+}
+
+.divider {
+  border-bottom: 1px solid #ccc;
+  margin-bottom: 20px;
+}
+
+.content-blog {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.blog-post {
+  margin-bottom: 20px;
+}
+
+.blog-post h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.blog-post p {
+  font-size: 16px;
+  line-height: 1.6;
+  margin-bottom: 15px;
+}
+
+.read-more-btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #11213f;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+.highlight {
+  font-style: italic;
+  font-weight: bold;
+}
+
+.blog-video {
+  width: 60%;
+}
+
+.blog-video iframe {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 9;
+}
+
+.blog-post h2 {
+  font-size: 32px;
+  color: #101828;
+}
+
+.blog-post p {
+  font-size: 18px;
+  color: #667085;
+}
+
+.divider-blog {
+  height: 0.5px;
+  background-color: rgb(238, 232, 232);
+  margin-top: 20px;
+  margin-bottom: 20px;
+  width: 100%;
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+  .blog {
+    padding: 20px 15px;
+  }
+
+  .blog-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .blog-title {
+    font-size: 24px;
+    margin-left: 0;
+    margin-top: 5px;
+  }
+
+  .content-blog {
+    flex-direction: column;
+  }
+
+  .blog-post {
+    margin-bottom: 30px;
+  }
+  .blog-video {
+    display: none;
+  }
+  .blog-post h2 {
+    font-size: 20px;
+    color: #101828;
+  }
+
+  .blog-post p {
+    font-size: 15px;
+    color: #667085;
+  }
+}
+
+/* Desktop Styles */
+@media (min-width: 769px) {
+  .blog {
+    padding: 40px 80px;
+  }
+
+  .content-blog {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+
+  .blog-post {
+    width: 45%;
+    margin-bottom: 0;
+  }
+}
