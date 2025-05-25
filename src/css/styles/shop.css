@@ -80,14 +80,6 @@
   font-size: 35px;
 }
 
-.shop-divider {
-  height: 0.5px;
-  background-color: rgb(216, 207, 207);
-  margin-top: 20px;
-  margin-bottom: 20px;
-  width: 100%;
-}
-
 /* Desktop */
 @media (min-width: 768px) {
   .content-shop {
@@ -173,9 +165,6 @@
     padding-left: 10px;
   }
 
-  .shop-divider {
-    display: none;
-  }
   .search-container {
     display: none;
   }

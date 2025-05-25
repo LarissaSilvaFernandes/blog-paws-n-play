@@ -159,8 +159,19 @@ ul li a {
   color: #101828;
 }
 
+.divider {
+  height: 0.5px;
+  background-color: rgb(216, 207, 207);
+  margin-top: 20px;
+  margin-bottom: 20px;
+  width: 100%;
+}
+
 /* Mobile */
 @media (max-width: 768px) {
+  .divider {
+    display: none;
+  }
   .logo-icon-paws {
     width: 100%;
     position: relative;
