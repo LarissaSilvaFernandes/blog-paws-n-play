@@ -118,7 +118,7 @@
       </div>
     </header>
 
-    <main>
+    <main class="main-content">
       <section class="hero">
         <div class="hero-content">
           <h1>Pawsitively Perfect:<br />Where Every Pet's Dream Comes True!</h1>
@@ -221,7 +221,22 @@
                   Lorem ipsum dolor sit amet consectetur. Vitae donec
                   pellentesque ut eget tempor egestas diam.
                 </p>
-                <button class="add-to-cart">Add to Cart</button>
+                <div class="quantity-selector">
+                  <button class="quantity-button" data-action="decrement">
+                    -
+                  </button>
+                  <input
+                    type="number"
+                    class="quantity-input"
+                    value="1"
+                    min="1"
+                    max="10"
+                  />
+                  <button class="quantity-button" data-action="increment">
+                    +
+                  </button>
+                  <button class="add-to-cart">Add to Cart</button>
+                </div>
               </span>
             </div>
             <div class="product">
@@ -240,7 +255,22 @@
                   Lorem ipsum dolor sit amet consectetur. Vitae donec
                   pellentesque ut eget tempor egestas diam.
                 </p>
-                <button class="add-to-cart">Add to Cart</button>
+                <div class="quantity-selector">
+                  <button class="quantity-button" data-action="decrement">
+                    -
+                  </button>
+                  <input
+                    type="number"
+                    class="quantity-input"
+                    value="1"
+                    min="1"
+                    max="10"
+                  />
+                  <button class="quantity-button" data-action="increment">
+                    +
+                  </button>
+                  <button class="add-to-cart">Add to Cart</button>
+                </div>
               </span>
             </div>
             <div class="product" id="product3">
@@ -259,7 +289,22 @@
                   Lorem ipsum dolor sit amet consectetur. Vitae donec
                   pellentesque ut eget tempor egestas diam.
                 </p>
-                <button class="add-to-cart">Add to Cart</button>
+                <div class="quantity-selector">
+                  <button class="quantity-button" data-action="decrement">
+                    -
+                  </button>
+                  <input
+                    type="number"
+                    class="quantity-input"
+                    value="1"
+                    min="1"
+                    max="50"
+                  />
+                  <button class="quantity-button" data-action="increment">
+                    +
+                  </button>
+                  <button class="add-to-cart">Add to Cart</button>
+                </div>
               </span>
             </div>
           </div>
@@ -294,6 +339,17 @@
                 alt="Grooming"
               />
               <span class="overlay">Grooming</span>
+              <div class="overlay-text">
+                <h2>Grooming</h2>
+                <p class="services-product-description">
+                  Lorem ipsum dolor sit amet consectetur. Vitae donec
+                  pellentesque ut eget tempor egestas diam. Donec pellentesque
+                  ut eget tempor egestas diam. Vitae donec pellentesque ut eget
+                  tempor egestas diam. Donec pellentesque ut eget tempor egestas
+                  diam.
+                </p>
+                <button class="add-to-cart">Learn more</button>
+              </div>
             </div>
             <div class="product item2">
               <img
@@ -301,6 +357,17 @@
                 alt="Boarding"
               />
               <span class="overlay">Boarding</span>
+              <div class="overlay-text">
+                <h2>Boarding</h2>
+                <p class="services-product-description">
+                  Lorem ipsum dolor sit amet consectetur. Vitae donec
+                  pellentesque ut eget tempor egestas diam. Donec pellentesque
+                  ut eget tempor egestas diam. Vitae donec pellentesque ut eget
+                  tempor egestas diam. Donec pellentesque ut eget tempor egestas
+                  diam.
+                </p>
+                <button class="add-to-cart">Learn more</button>
+              </div>
             </div>
             <div class="product item5-desktop">
               <img
@@ -315,6 +382,17 @@
                 alt="Veterinary"
               />
               <span class="overlay">Veterinary</span>
+              <div class="overlay-text">
+                <h2>Veterinary</h2>
+                <p class="services-product-description">
+                  Lorem ipsum dolor sit amet consectetur. Vitae donec
+                  pellentesque ut eget tempor egestas diam. Donec pellentesque
+                  ut eget tempor egestas diam. Vitae donec pellentesque ut eget
+                  tempor egestas diam. Donec pellentesque ut eget tempor egestas
+                  diam.
+                </p>
+                <button class="add-to-cart">Learn more</button>
+              </div>
             </div>
             <div class="product item4">
               <img
@@ -322,6 +400,17 @@
                 alt="Training"
               />
               <span class="overlay">Training</span>
+              <div class="overlay-text">
+                <h2>Training</h2>
+                <p class="services-product-description">
+                  Lorem ipsum dolor sit amet consectetur. Vitae donec
+                  pellentesque ut eget tempor egestas diam. Donec pellentesque
+                  ut eget tempor egestas diam. Vitae donec pellentesque ut eget
+                  tempor egestas diam. Donec pellentesque ut eget tempor egestas
+                  diam.
+                </p>
+                <button class="add-to-cart">Learn more</button>
+              </div>
             </div>
             <div class="product item5-mobile">
               <img
@@ -718,5 +807,29 @@
         </div>
       </section>
     </main>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const quantityButtons = document.querySelectorAll(".quantity-button");
+
+        quantityButtons.forEach((button) => {
+          button.addEventListener("click", function () {
+            const action = this.dataset.action;
+            const input = this.parentNode.querySelector(".quantity-input");
+            let value = parseInt(input.value);
+            const min = parseInt(input.min);
+            const max = parseInt(input.max);
+
+            if (action === "increment") {
+              value = Math.min(value + 1, max);
+            } else if (action === "decrement") {
+              value = Math.max(value - 1, min);
+            }
+
+            input.value = value;
+          });
+        });
+      });
+    </script>
   </body>
 </html>
