@@ -650,51 +650,65 @@
         <div class="content-getin">
           <div class="form-side">
             <div class="form-container">
-              <div class="form-group">
-                <label for="firstName">First name</label>
-                <input
-                  type="text"
-                  id="firstName"
-                  name="firstName"
-                  placeholder="First name"
-                />
-              </div>
-              <div class="form-group">
-                <label for="lastName">Last name</label>
-                <input
-                  type="text"
-                  id="lastName"
-                  name="lastName"
-                  placeholder="Last name"
-                />
-              </div>
-              <div class="form-group">
-                <label for="email">Email</label>
-                <input
-                  type="email"
-                  id="email"
-                  name="email"
-                  placeholder="you@company.com"
-                />
-              </div>
-              <div class="form-group">
-                <label for="message">Message</label>
-                <textarea id="message" name="message" rows="4"></textarea>
-              </div>
-              <div class="form-group">
-                <input
-                  type="checkbox"
-                  id="privacyPolicy"
-                  name="privacyPolicy"
-                />
-                <label for="privacyPolicy" class="privacy-label"
-                  >You agree to our friendly
-                  <a href="#">privacy policy</a>.</label
-                >
-              </div>
-              <button type="submit" class="submit-button">Send message</button>
+              <form id="myForm">
+                <div class="form-group">
+                  <label for="firstName">First name</label>
+                  <input
+                    type="text"
+                    id="firstName"
+                    name="firstName"
+                    placeholder="First name"
+                    required
+                  />
+                </div>
+                <div class="form-group">
+                  <label for="lastName">Last name</label>
+                  <input
+                    type="text"
+                    id="lastName"
+                    name="lastName"
+                    placeholder="Last name"
+                    required
+                  />
+                </div>
+                <div class="form-group">
+                  <label for="email">Email</label>
+                  <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    placeholder="you@company.com"
+                    required
+                  />
+                </div>
+                <div class="form-group">
+                  <label for="message">Message</label>
+                  <textarea
+                    id="message"
+                    name="message"
+                    rows="4"
+                    required
+                  ></textarea>
+                </div>
+                <div class="form-group">
+                  <input
+                    type="checkbox"
+                    id="privacyPolicy"
+                    name="privacyPolicy"
+                    required
+                  />
+                  <label for="privacyPolicy" class="privacy-label">
+                    You agree to our friendly
+                    <a href="#">privacy policy</a>.</label
+                  >
+                </div>
+                <button type="submit" class="submit-button">
+                  Send message
+                </button>
+              </form>
             </div>
           </div>
+
           <div class="contact-info-side">
             <div class="contact-item">
               <svg
@@ -830,6 +844,39 @@
           });
         });
       });
+    </script>
+
+    <script>
+      document
+        .getElementById("myForm")
+        .addEventListener("submit", function (event) {
+          let firstName = document.getElementById("firstName").value;
+          let lastName = document.getElementById("lastName").value;
+          let email = document.getElementById("email").value;
+          let message = document.getElementById("message").value;
+          let privacyPolicy = document.getElementById("privacyPolicy").checked;
+
+          if (firstName === "") {
+            alert("First name must be filled out");
+            event.preventDefault(); 
+          }
+          if (lastName === "") {
+            alert("Last name must be filled out");
+            event.preventDefault(); 
+          }
+          if (email === "") {
+            alert("Email must be filled out");
+            event.preventDefault(); 
+          }
+          if (message === "") {
+            alert("Message must be filled out");
+            event.preventDefault(); 
+          }
+          if (!privacyPolicy) {
+            alert("You must agree to the privacy policy");
+            event.preventDefault(); 
+          }
+        });
     </script>
   </body>
 </html>
