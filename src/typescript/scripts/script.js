@@ -77,4 +77,29 @@ document.addEventListener("DOMContentLoaded", function () {
             }
         });
     });
+    // Subscribe validation
+    var emailForm = document.getElementById("emailForm");
+    var emailInput = document.getElementById("emailSubscribe");
+    emailForm.addEventListener("submit", function (event) {
+        event.preventDefault();
+        var emailValue = emailInput.value;
+        if (emailValue === "") {
+            alert("Email must be filled out");
+            event.preventDefault();
+        }
+        else {
+            alert("Your email has been sent successfully!");
+            emailInput.value = "";
+        }
+    });
+    // Shop seleção de categorias
+    var categoryButtons = document.querySelectorAll(".category-button");
+    var randomButton = categoryButtons[0];
+    randomButton.classList.add("active");
+    categoryButtons.forEach(function (button) {
+        button.addEventListener("click", function () {
+            categoryButtons.forEach(function (btn) { return btn.classList.remove("active"); });
+            button.classList.add("active");
+        });
+    });
 });

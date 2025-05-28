@@ -193,6 +193,11 @@
   margin: 0;
 }
 
+.category-button.active {
+  background-color: rgb(10, 10, 80);
+  color: white;
+}
+
 /* Desktop */
 @media (min-width: 768px) {
   .content-shop {
