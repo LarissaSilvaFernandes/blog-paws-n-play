@@ -1,0 +1,142 @@
+.newsletter {
+  text-align: left;
+  background: #101828;
+  color: rgb(255, 255, 255);
+}
+
+.divider-newsletter {
+  height: 1px;
+  background-color: #344054;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  width: 100%;
+}
+.content-newsletter {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.text-content {
+  display: flexbox;
+  flex-direction: column;
+}
+.subscribe-button {
+  padding: 10px;
+  flex: 1;
+  border-radius: 7.07px;
+  border: 0.9px solid #d0d5dd;
+  overflow: hidden;
+  flex-direction: row;
+  align-items: center;
+}
+
+.text-content h2 {
+  font-size: 20px;
+  font-weight: bold;
+}
+.text-content p {
+  font-size: 20px;
+  color: #cecece;
+}
+
+.button-newsletter {
+  display: flex;
+  align-items: center;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+.button-newsletter input[type="email"] {
+  padding: 8px 12px;
+  width: 256px;
+  border-radius: 8px;
+  outline: none;
+  background-color: #f2f2f2;
+  color: #555;
+  margin-right: 10px;
+}
+
+.button-newsletter button {
+  padding: 8px 16px;
+  border: none;
+  outline: none;
+  background-color: white;
+  color: #555;
+  cursor: pointer;
+  border-left: 1px solid #ccc;
+  transition: background-color 0.2s ease;
+}
+
+.button-newsletter button:hover {
+  background-color: #eee;
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+  .content-newsletter {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 1rem;
+    padding: 17px;
+  }
+
+  .text-content {
+    margin-bottom: 1rem;
+    align-items: flex-start;
+  }
+
+  .text-content p {
+    width: 100%;
+    max-width: none;
+    white-space: normal;
+  }
+
+  .subscribe-button {
+    flex: 1;
+    border-radius: 7.07px;
+    border: 0.9px solid #d0d5dd;
+    overflow: hidden;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    margin-top: 10px;
+  }
+  .text-content p {
+    font-size: 13px;
+    color: #cecece;
+  }
+
+  .button-newsletter input[type="email"] {
+    width: 100%;
+    border-radius: 8px;
+    outline: none;
+    background-color: #f2f2f2;
+    color: #555;
+    margin-right: 0px;
+    margin-left: 0px;
+  }
+
+  .button-newsletter {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+    padding: 0px;
+    margin-right: 0px;
+    margin-left: 0px;
+    margin-top: 0px;
+  }
+}
+
+/* Desktop Styles */
+@media (min-width: 769px) {
+  .text-content {
+    padding-left: 79px;
+  }
+  .button-newsletter {
+    padding-right: 300px;
+  }
+}

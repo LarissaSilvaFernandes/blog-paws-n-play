@@ -208,6 +208,10 @@
   .contact-info-side .contact-item svg {
     margin-bottom: 10px;
   }
+
+  .form-group label {
+    font-size: 12px;
+  }
 }
 
 /* Desktop Styles */
