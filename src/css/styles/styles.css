@@ -198,6 +198,10 @@ ul li a {
   order: 7;
 }
 
+.newsletter {
+  order: 8;
+}
+
 /* Mobile */
 @media (max-width: 768px) {
   .blog {

@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="src/css/styles/team.css" />
     <link rel="stylesheet" href="src/css/styles/blog.css" />
     <link rel="stylesheet" href="src/css/styles/getin.css" />
+    <link rel="stylesheet" href="src/css/styles/newsletter.css" />
     <script src="src/typescript/scripts/script.js" defer></script>
   </head>
   <body>
@@ -820,6 +821,21 @@
           </div>
         </div>
       </section>
+      <section class="newsletter">
+        <div class="divider-newsletter"></div>
+        <div class="content-newsletter">
+          <div class="text-content">
+            <h3>Join our newsletter</h3>
+            <p>
+              Be the first to receive latest updates on promo, sales and offers
+            </p>
+          </div>
+          <div class="button-newsletter">
+            <input type="email" placeholder="Enter your email" />
+            <button class="subscribe-button">Subscribe</button>
+          </div>
+        </div>
+      </section>
     </main>
 
     <script>
@@ -858,23 +874,23 @@
 
           if (firstName === "") {
             alert("First name must be filled out");
-            event.preventDefault(); 
+            event.preventDefault();
           }
           if (lastName === "") {
             alert("Last name must be filled out");
-            event.preventDefault(); 
+            event.preventDefault();
           }
           if (email === "") {
             alert("Email must be filled out");
-            event.preventDefault(); 
+            event.preventDefault();
           }
           if (message === "") {
             alert("Message must be filled out");
-            event.preventDefault(); 
+            event.preventDefault();
           }
           if (!privacyPolicy) {
             alert("You must agree to the privacy policy");
-            event.preventDefault(); 
+            event.preventDefault();
           }
         });
     </script>
