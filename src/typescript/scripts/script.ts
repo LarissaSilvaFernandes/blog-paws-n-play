@@ -99,4 +99,40 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     });
   });
+
+  // Subscribe validation
+  const emailForm = document.getElementById("emailForm") as HTMLFormElement;
+  const emailInput = document.getElementById(
+    "emailSubscribe"
+  ) as HTMLInputElement;
+
+  emailForm.addEventListener("submit", (event) => {
+    event.preventDefault();
+    const emailValue = emailInput.value;
+
+    if (emailValue === "") {
+      alert("Email must be filled out");
+      event.preventDefault();
+    } else {
+      alert("Your email has been sent successfully!");
+      emailInput.value = "";
+    }
+  });
+
+  // Shop seleção de categorias
+  const categoryButtons: NodeListOf<HTMLButtonElement> =
+    document.querySelectorAll(
+      ".category-button"
+    ) as NodeListOf<HTMLButtonElement>;
+
+  const randomButton: HTMLButtonElement =
+    categoryButtons[0] as HTMLButtonElement;
+  randomButton.classList.add("active");
+
+  categoryButtons.forEach((button) => {
+    button.addEventListener("click", () => {
+      categoryButtons.forEach((btn) => btn.classList.remove("active"));
+      button.classList.add("active");
+    });
+  });
 });

@@ -831,10 +831,23 @@
               Be the first to receive latest updates on promo, sales and offers
             </p>
           </div>
-          <div class="button-newsletter">
-            <input type="email" placeholder="Enter your email" />
-            <button class="subscribe-button">Subscribe</button>
-          </div>
+          <form id="emailForm">
+            <div class="button-newsletter">
+              <input
+                type="email"
+                id="emailSubscribe"
+                placeholder="Enter your email"
+                required
+              />
+              <button
+                id="subscribeButton"
+                class="subscribe-button"
+                type="submit"
+              >
+                Subscribe
+              </button>
+            </div>
+          </form>
         </div>
       </section>
       <footer class="footer">
