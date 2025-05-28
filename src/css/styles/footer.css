@@ -1,0 +1,142 @@
+.footer {
+  background-color: #101828;
+  color: #fff;
+  padding: 60px;
+}
+
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 0 auto;
+}
+
+.footer-logo span {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.footer-section {
+  margin-bottom: 20px;
+}
+
+.footer-section h3 {
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.footer-section a {
+  display: block;
+  color: #fff;
+  text-decoration: none;
+  margin-bottom: 5px;
+  font-size: 14px;
+}
+
+.footer-logo {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.footer-logo svg {
+  width: 32px;
+  height: 32px;
+  margin-right: 10px;
+}
+
+.footer-description {
+  font-size: 18px;
+  line-height: normal;
+  color: #fff;
+}
+
+.divider-footer {
+  margin-top: 10px;
+  height: 5px;
+  background-color: #344054;
+  width: 100%;
+}
+
+.bottom-footer {
+  background-color: #101828;
+  color: #fff;
+  padding: 20px;
+}
+
+.bottom-footer-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto;
+}
+
+.copyright {
+  font-size: 16px;
+}
+
+.footer-social-links {
+  display: flex;
+  gap: 20px;
+}
+
+.footer-social-links a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.5em;
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+  .footer {
+    padding: 20px;
+  }
+
+  .footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+  }
+
+  .footer-logo-section {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .footer-section {
+    width: calc(50% - 10px);
+    box-sizing: border-box;
+    margin-bottom: 20px;
+  }
+
+  .footer-section:nth-child(2n) {
+    padding-right: 0;
+  }
+
+  .footer-logo-section {
+    width: 100%;
+  }
+
+  .bottom-footer-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    text-align: center;
+  }
+
+  .footer-social-links {
+    margin-top: 10px;
+  }
+}
+
+/* Desktop Styles */
+@media (min-width: 769px) {
+  .footer-section {
+    margin-left: 10px;
+    width: 13%;
+  }
+
+  .footer-logo-section {
+    width: 30%;
+  }
+}
