@@ -1,3 +1,12 @@
+@font-face {
+  font-family: 'Formative Bold';
+  src: url('src/assets/Formative Font Family/FormativeTrial-Bold-BF656fed900a747.otf') format('truetype');
+}
+@font-face {
+  font-family: 'Formative Regular';
+  src: url('src/assets/Formative Font Family/FormativeTrial-Regular-BF656fed9028715.otf') format('truetype');
+}
+
 * {
   box-sizing: border-box;
 }
@@ -263,7 +272,7 @@ ul li a {
     font-family: "Formative Trial";
     font-size: 14px;
     font-style: normal;
-    font-weight: 600;
+    font-weight: 100;
     line-height: 120%;
   }
 }
