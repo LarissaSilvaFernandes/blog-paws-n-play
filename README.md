@@ -2,6 +2,10 @@
 
 ## Sobre o Projeto
 
-Blog responsivo para um site de pet shop chamado “Paws n’ Play”. O objetivo é apresentar um header fixo, hero com imagem de fundo, navegação clara e uma base de informações por categorias (Shop, Services, About, Blog, Contact).
+Paws n' Play é um blog responsivo para **web** e **mobile** de um Pet Shop. O blog apresenta um header fixo, hero com imagem de fundo, navegação clara e informações categorizadas (Shop, Services, About, Blog, Contact). 
 
-Tecnologias: HTML5, CSS3 e TypeScript/JavaScrip (sem frameworks neste momento), layout bem estruturado e responsivo.
+Tecnologias: HTML5, CSS3 e TypeScript/JavaScrip (sem frameworks neste momento) e com layout bem estruturado.
+
+O objetivo é demonstrar habilidades básicas de desenvolvimento de software.
+![imagem ilustrativa](/capa.jpg)
+
